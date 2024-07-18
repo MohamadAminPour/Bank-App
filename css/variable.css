@@ -1,0 +1,11 @@
+:root {
+    /* color-scheme: dark; */
+    --succsess: #04a777;
+    --error: rgb(220, 53, 69);
+    --information: #00c3ff;
+    --white: #fff;
+    --light: rgb(128, 128, 128);
+    --black1: #44474a;
+    --black2: #212529;
+    --shadow: rgba(0, 0, 0, 0.1);
+}

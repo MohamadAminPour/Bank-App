@@ -1,0 +1,57 @@
+@import url(./header.css);
+@import url(./main.css);
+@import url(./menu.css);
+@import url(./login.css);
+@import url(./variable.css);
+@import url(./sharge.css);
+
+
+@font-face {
+    font-family: 'tanha';
+    src: url(../fonts/Tanha.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'tanha';
+}
+
+/* *.dark1 {
+    background-color: var(--black1);
+    color: white;
+}
+
+*.dark2 {
+    background-color: var(--black2);
+    color: white;
+}
+
+*.darkColor {
+    color: var(--black2);
+}
+
+*.light {
+    background-color: white;
+    color: var(--balck1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+} */
+
+body {
+    font-family: 'tanha';
+    overflow-x: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+input ,button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+}

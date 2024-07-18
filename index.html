@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-------------------------------------------- owl carousel -------------------------------------------------->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <!------------------------------------------------ css ------------------------------------------------------->
+    <link rel="stylesheet" href="./css/style.css">
+    <title>آپ | ap</title>
+</head>
+
+<body class="dark2">
+
+    <menu class="menu dark1">
+        <div class="menu-accounts">
+            <div class="menu-account">
+                <img src="./image/16.jpg" alt="profile" class="menu-account-img">
+                <div class="menu-account__info">
+                    <p class="menu-account__name">...</p>
+                    <p class="menu-account__family">...</p>
+                </div>
+                <i class='bx bx-x closeBtn'></i>
+            </div>
+        </div>
+        <div class="searchBar">
+            <input type="text" class="searchBar-input" placeholder="...جستجو">
+            <i class='bx bx-search searchBar-icon'></i>
+        </div>
+        <ul class="menu-list">
+            <li class="menu-item">
+                <p class="menu-item__text">خانه</p>
+                <i class='bx bx-home menu-item__icon'></i>
+            </li>
+            <li class="menu-item">
+                <p class="menu-item__text">درباره ما</p>
+                <i class='bx bx-info-circle menu-item__icon'></i>
+            </li>
+            <li class="menu-item">
+                <p class="menu-item__text">قوانین</p>
+                <i class='bx bx-error-alt menu-item__icon'></i>
+            </li>
+            <li class="menu-item">
+                <p class="menu-item__text">تنظیمات</p>
+                <i class='bx bx-cog menu-item__icon'></i>
+            </li>
+            <li class="menu-item">
+                <p class="menu-item__text">افزودن حساب</p>
+                <i class='bx bx-user menu-item__icon'></i>
+            </li>
+            <li class="menu-item logOut">
+                <p class="menu-item__text">خروج</p>
+                <i class='bx bx-log-out menu-item__icon'></i>
+            </li>
+        </ul>
+    </menu>
+
+    <div class="logOut-message dark1">
+        <p class="logOut-message__text">از خروج حساب کاربری خود مطمئن هستید؟</p>
+        <div class="logOut-message__btns">
+            <button class="logOut-message__yesBtn">بله</button>
+            <button class="logOut-message__NoBtn">خیر</button>
+        </div>
+    </div>
+
+
+    <header>
+        <div class="header-left">
+            <div class="header-hambergerMenu">
+                <i class='bx bx-menu header-hambergerMenu__icon darkColor'></i>
+            </div>
+            <div class="header-theme">
+                <p class="header-theme__text darkColor">تم تیره</p>
+                <i class='bx bx-moon header-theme__icon darkColor'></i>
+            </div>
+            <div class="header-language">
+                <p class="header-language__text darkColor">انگلیسی</p>
+                <i class='bx bx-world header-languageّ__icon darkColor'></i>
+            </div>
+            <div class="header-notif">
+                <p class="header-notif__text darkColor">اطلاعیه</p>
+                <i class='bx bx-bell header-notif__icon darkColor'></i>
+                <span class="header-notif__count darkColor">1</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <p class="header-right__welcomeMsg">! ظهر بخیر <span class="header-right__username"> ... </span> کاربر
+            </p>
+            <p class="header-right__date"> امروز : <span> 17:28 1403/01/01 </span></p>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-header">
+            <div class="main-header__right mainHeaderBox dark1">
+
+                <div class="balance">
+                    <p class="balance-value">موجودی : 3,923,070 ریال</p>
+                    <p class="cardNumber">6037 3381 6772 1010 : شماره کارت</p>
+                </div>
+
+                <div class="inComes">
+                    <p class="inComes-text">ورودی</p>
+                    <p class="inComes-value">538,000</p>
+                </div>
+
+                <div class="outComes">
+                    <p class="outComes-text">خروجی</p>
+                    <p class="outComes-value">1,273,000</p>
+                </div>
+
+            </div>
+
+            <div class="main-header__left mainHeaderBox dark1">
+                <div class="chart">
+                    <canvas id="BarChart"></canvas>
+                </div>
+                <div class="chart">
+                    <canvas id="DoughnutChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-movements dark1">
+            <div class="movements-header">
+                <div class="movements-selection">
+                    <div class="movements-defaultSelect">
+                        <i class='bx bx-chevron-down'></i>
+                        <p>مرتب سازی پیش فرض</p>
+                    </div>
+                    <ul class="movements-selectList">
+                        <li class="movements-selectItem" data-mov="movDefault">مرتب سازی پیش فرض</li>
+                        <li class="movements-selectItem" data-mov="movInternet">خرید اینترنت</li>
+                        <li class="movements-selectItem" data-mov="movSharge">خرید شارژ</li>
+                        <li class="movements-selectItem" data-mov="movCard">کارت به کارت</li>
+                        <li class="movements-selectItem" data-mov="movBill">پرداخت قبض</li>
+                        <li class="movements-selectItem" data-mov="movTicket">بلیت هواپیما</li>
+                        <li class="movements-selectItem" data-mov="movLoan">درخواست وام</li>
+                    </ul>
+                </div>
+                <p class="movements-header__title">تراکنش ها</p>
+            </div>
+            <div class="movements-container">
+                <!-- <div class="movements-item internet">
+                    <div class="internet-left">
+                        <i class='bx bx-rocket'></i>
+                    </div>
+                    <div class="internet-right">
+                        <p class="internet-title title">خرید اینترنت</p>
+                        <p class="internet-subtitle subTitle"> اینترنت همراه اول : <span
+                                class="internet-value">20,000</span> تومان
+                        </p>
+                    </div>
+                </div>
+
+                <div class="movements-item card">
+                    <div class="card-left">
+                        <i class='bx bxs-credit-card'></i>
+                    </div>
+                    <div class="card-right">
+                        <p class="card-title title">کارت به کارت</p>
+                        <p class="card-subtitle subTitle"> شارژ همراه اول : <span class="internet-value">20,000</span>
+                            تومان
+                        </p>
+                    </div>
+                </div>
+
+                <div class="movements-item bill">
+                    <div class="bill-left">
+                        <i class='bx bx-receipt'></i>
+                    </div>
+                    <div class="bill-right">
+                        <p class="bill-title title">پرداخت قبض</p>
+                        <p class="bill-subtitle subTitle"> شارژ همراه اول : <span class="internet-value">20,000</span>
+                            تومان
+                        </p>
+                    </div>
+                </div>
+
+                <div class="movements-item ticket">
+                    <div class="ticket-left">
+                        <i class='bx bxs-plane-alt'></i>
+                    </div>
+                    <div class="ticket-right">
+                        <p class="ticket-title title">بلیت هواپیما</p>
+                        <p class="ticket-subtitle subTitle"> شارژ همراه اول : <span class="internet-value">20,000</span>
+                            تومان
+                        </p>
+                    </div>
+                </div>
+
+                <div class="movements-item loan">
+                    <div class="loan-left">
+                        <i class='bx bx-money'></i>
+                    </div>
+                    <div class="loan-right">
+                        <p class="loan-title title">درخواست وام</p>
+                        <p class="loan-subtitle subTitle"> شارژ همراه اول : <span class="internet-value">20,000</span>
+                            تومان
+                        </p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+        <div class="main-operatios dark1">
+
+            <div class="operatios-charge operationsBox">
+                <p class="operatios-internet__text operationsText darkColor">خرید شارژ</p>
+                <i class='bx bxs-bolt'></i>
+            </div>
+
+            <div class="operatios-internet operationsBox">
+                <p class="operatios-internet__text operationsText darkColor">خرید اینترنت</p>
+                <i class='bx bx-rocket'></i>
+            </div>
+
+            <div class="operatios-bill operationsBox">
+                <p class="operatios-bill__text operationsText darkColor">پرداخت قبض</p>
+                <i class='bx bx-receipt'></i>
+            </div>
+
+            <div class="operatios-CardByCard operationsBox">
+                <p class="operatios-internet__text operationsText darkColor">کارت به کارت</p>
+                <i class='bx bxs-credit-card'></i>
+            </div>
+
+            <div class="operatios-loan operationsBox">
+                <p class="operatios-internet__text operationsText darkColor">درخواست وام</p>
+                <i class='bx bx-money'></i>
+            </div>
+
+            <div class="operatios-ticket operationsBox">
+                <p class="operatios-internet__text operationsText darkColor">بلیت هواپیما</p>
+                <i class='bx bxs-plane-alt'></i>
+            </div>
+        </div>
+    </main>
+
+    <div class="message dark1">
+        <p class="message-title">خطا در ورود به پنل</p>
+        <p class="message-subTitle">لطفا شماره تلفن یا رمز عبور را درست وارد کنید</p>
+    </div>
+
+    <!--login and register-->
+    <div class="loginRegister-container  dark2">
+        <div class="register dark1">
+            <p class="register-title">ثبت نام در همراه بانک</p>
+            <form class="register-form">
+                <input type="text" class="register-username registerInput" placeholder="نام کاربری">
+                <input type="text" class="register-name registerInput" placeholder="نام">
+                <input type="text" class="register-family registerInput" placeholder="نام خانوادگی">
+                <input type="text" class="register-phoneNumber registerInput" placeholder="شماره تلفن">
+                <input type="text" class="register-cardNumber registerInput" placeholder="شماره کارت">
+                <input type="text" class="register-pasword registerInput" placeholder="رمز عبور">
+                <button class="registerBtn">ثبت نام</button>
+            </form>
+            <div class="register-footer">
+                <p class="goToLoginBtn">حسابی برای ورود دارید؟</p>
+            </div>
+        </div>
+
+        <div class="login active dark1">
+            <p class="login-title">ورود به همراه بانک</p>
+            <form class="login-form">
+                <input type="text" class="login-phoneNumber loginInput" placeholder="شماره تلفن">
+                <input type="password" class="login-pasword loginInput" placeholder="رمز عبور">
+                <button class="loginBtn">ورود</button>
+            </form>
+            <div class="login-footer">
+                <p class="goToRegisterBtn">حسابی برای ورود ندارید؟</p>
+                <p class="forgetPasswordBtn">فراموشی رمز عبور؟</p>
+            </div>
+        </div>
+
+
+        <div class="forgetPassword dark1">
+            <p class="forgetPassword-title">! فراموشی رمز عبور</p>
+            <p class="forgetPassword-subTitle">با وارد کردن اطلاعات زیر رمز عبور خود را به دست آورید</p>
+            <form class="forgetPassword-form">
+                <input type="text" class="forgetPassword-username forgetPasswordInput" placeholder="نام کاربری">
+                <input type="text" class="forgetPassword-phoneNumber forgetPasswordInput" placeholder="شماره تلفن">
+                <button class="sendPasswordBtn">ارسال</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="shrge-bg">
+        <div class="shrge-container">
+            <div class="shrge-selectBar">
+                <div class="shrge-selectBar__selection"></div>
+                <div class="shrge-selectBar__pin shrge-select">رمز شارژ</div>
+                <div class="shrge-selectBar__Direct shrge-select active">مستقیم</div>
+            </div>
+            <div class="shrge">
+                <div class="direct-container">
+                    <div class="shrge-title">شماره موبایل خود را وارد کنید</div>
+                    <input type="text" class="shrge-input" placeholder="شماره موبایل">
+                    <div class="shrge-types">
+                        <img src="./image/Hamrah-Aval.png" alt="" class="shrge-type hamralAval">
+                        <img src="./image/irancel.png" alt="" class="shrge-type irancel">
+                        <img src="./image/rightel.png" alt="" class="shrge-type rightgel">
+                    </div>
+                    <div class="shrge-suggestion">
+                        <p class="shrge-suggestion__title">مبلغ های پیشنهادی (ریال)</p>
+                        <div class="shrge-suggestion__slider">
+                            <div class="owl-carousel owl-theme">
+                                <div class="item suggestion-item">
+                                    <p class="suggestion-textItem Sh5">50,000</p>
+                                </div>
+                                <div class="item suggestion-item">
+                                    <p class="suggestion-textItem Sh10">100,000</p>
+                                </div>
+                                <div class="item suggestion-item">
+                                    <p class="suggestion-textItem Sh20">200,000</p>
+                                </div>
+                                <div class="item suggestion-item">
+                                    <p class="suggestion-textItem Sh50">500,000</p>
+                                </div>
+                                <div class="item suggestion-item">
+                                    <p class="suggestion-textItem Sh100">1,000,000</p>
+                                </div>
+
+                                <div class="item suggestion-item">
+                                    <p class="desired-textItem">دلخواه</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shrge-desired">
+                            <input type="text" class="desired__input" placeholder="مبلغ">
+                            <button class="desired__btn">تایید</button>
+                        </div>
+                    </div>
+                    <button class="shrge-buy">خرید</button>
+                </div>
+                <div class="pin-container">
+                    <div class="shrge-title">شماره موبایل خود را وارد کنید</div>
+                    <input type="text" class="shrge-input" placeholder="شماره موبایل">
+                    <div class="shrge-types">
+                        <img src="./image/Hamrah-Aval.png" alt="" class="shrge-type hamralAval">
+                        <img src="./image/irancel.png" alt="" class="shrge-type irancel">
+                        <img src="./image/rightel.png" alt="" class="shrge-type rightgel">
+                    </div>
+                    <div class="shrge-suggestion">
+                        <p class="shrge-suggestion__title">مبلغ های پیشنهادی (ریال)</p>
+                        <div class="shrge-suggestion__slider">
+                            <div class="owl-carousel owl-theme">
+                                <div class="item suggestion-item">
+                                    <p class="suggestion-textItem Sh5">50,000</p>
+                                </div>
+                                <div class="item suggestion-item">
+                                    <p class="suggestion-textItem Sh10">100,000</p>
+                                </div>
+                                <div class="item suggestion-item">
+                                    <p class="suggestion-textItem Sh20">200,000</p>
+                                </div>
+                                <div class="item suggestion-item">
+                                    <p class="suggestion-textItem Sh50">500,000</p>
+                                </div>
+                                <div class="item suggestion-item">
+                                    <p class="suggestion-textItem Sh100">1,000,000</p>
+                                </div>
+
+                                <div class="item suggestion-item">
+                                    <p class="desired-textItem">دلخواه</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shrge-desired">
+                            <input type="text" class="desired__input" placeholder="مبلغ">
+                            <button class="desired__btn">تایید</button>
+                        </div>
+                    </div>
+                    <button class="shrge-buy">خرید</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-------------------------------------------owl carousel---------------------------------------------------->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <!--------------------------------------------chart js------------------------------------------------------>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
